@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" >
+   history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+</script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+
+#view {
+    top: 140px;
+    background-color: #4CAF50;
+}
+
+#modify {
+    top: 200px;
+    background-color: #2196F3;
+}
+
+#delete {
+    top: 260px;
+    background-color: #f44336;
+}
+
+#logout {
+    top: 380px;
+    background-color: #555;
+}
+#func {
+    top: 320px;
+    background-color: #cc128b;
+}
+</style>
+</head>
+<body style="background: url(https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0d156f806a757123e569cbc0206d43fe&auto=format&fit=crop&w=1500&q=80);background-repeat: no-repeat;background-size: cover;">
+<div>
+    <a href="site.html"><img src="logo.png" height="100px"></a>
+  </div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="adminview.html" id="view">View</a>
+  <a href="signup.php" id="modify">Modify</a>
+  <a href="delete.php" id="delete">Delete</a>
+  <a href="aggregate.html" id=func>Func</a>
+  <a href="site.html" id="logout">Log out</a>
+</div>
+
+<div style="margin-left:80px;margin-left: 33%">
+  <h1 style="color: white;font-family: 'Raleway', sans-serif;font-size: 45px;">ADMINISTRATOR</h1>
+</div>
+     
+</body>
+</html>

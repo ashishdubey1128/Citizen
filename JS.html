@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function showTime()
+		{
+			var date = new Date();
+			var t = date.toLocaleTimeString();
+			document.getElementById("MyClockDisplay").innerHTML=t;
+		}
+		setInterval(function(){showTime()},1000);
+		function div3()
+		{
+			document.body.style.backgroundColor = document.fo.colo.value;
+		}
+	</script>
+	<div id="MyClockDisplay" class="clock" style="text-align: right;width: 100%"></div>
+	<div></div>
+	<div>
+		<form name="fo" onsubmit="div3()">
+			<select name="colo">
+				<option>red</option>
+				<option>blue</option>
+				<option>green</option>
+				<option>yellow</option>
+			</select>
+			<select name="size">
+				<option>100</option>
+				<option>200</option>
+				<option>300</option>
+				<option>400</option>
+				<option>500</option>
+				<option>600</option>
+				<option>700</option>
+				<option>800</option>
+			</select>
+			<select name="styl">
+				<option>calibri</option>
+				<option>georgia</option>
+				<option>arial</option>
+			</select>
+			<input type="submit" name="sub">
+		</form>
+	</div>
+</body>
+</html>

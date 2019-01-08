@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.x{
+			background-color:red;
+		}
+		.p{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<h1>GREETING CARD</h1>
+	<button>OPEN WITH SMILE</button>
+	<table>
+		<tr>
+			<td height="100px" width="100px"></td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+	var a=document.querySelector("td");
+	// a.style.visibility="hidden";
+	var x=document.querySelector("button");
+	var y=document.querySelector("h1");
+	var z=document.querySelector("body");
+	x.addEventListener("click",function(){
+		y.textContent=("Have a Good Day");
+		z.style.background="pink";
+		a.classList.add("p");
+		// a.style.visibility="visible";
+	})
+</script>
+</body>
+</html>

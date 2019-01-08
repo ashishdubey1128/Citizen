@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<script type="text/javascript">
+		function a() {
+			var a=document.f1.pass.value;
+			var b=document.f1.cpass.value;
+			if (a!=b) {alert("Passwords do not Match!!");}
+				else{
+					alert("Passwords Match!!");;
+				}
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body  style="background-image: url(backdrop1.jpg);background-size: cover;">
+
+		<div class="nav1">
+		<a href="site.html"><img src="logo.png" height="100px"></a>
+	</div>
+	<div class="container">
+		<form name="f1">
+			<table class="table table-hover" style="width: 50%;font-weight: 700;background-color: skyblue;margin-top: 15%;margin-left: 25%;">
+				<tr> 
+					<td>AADHAR NUMBER</td>
+					<td style="text-align: center;padding-top: .5em;padding-bottom: .5em"><input type="text" name="ano"></td>
+				</tr>
+				<tr> 
+					<td>User Name</td>
+					<td style="text-align: center;padding-top: .5em;padding-bottom: .5em"><input type="text" name="uname"></td>
+				</tr>
+				<tr>
+					<td>Create Password</td>
+					<td style="text-align: center;padding-top: .5em;padding-bottom: .5em"><input type="password" name="pass"></td>
+				</tr>
+				<tr>
+					<td>Confirm Password</td>
+					<td style="text-align: center;padding-top: .5em;padding-bottom: .5em"><input type="password" name="cpass"></td>
+				</tr>
+			</table>
+		</form>
+		<a href="personal.html"><input type="submit" name="submit" value="Submit" class="btn btn-primary btn large" style="margin-left: 45%;width: 100px;" onclick="a()"></a>
+	</div>
+
+</body>
+</html>

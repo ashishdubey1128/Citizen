@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function validate()
+		{
+			var y=document.myform.rno.value
+		var x=document.myform.phno.value;
+		var TCode = document.getElementById('rno').value;
+      for(var i=0; i<TCode.length; i++)
+      {
+        var char1 = TCode.charAt(i);
+        var cc = char1.charCodeAt(0);
+
+        if((cc>47 && cc<58) || (cc>64 && cc<91) || (cc>96 && cc<123))
+        {
+
+        }
+         else {
+         alert('Input is not alphanumeric');
+         return false;
+         }
+		if(x.length!=10)
+			alert("Phone Number Incorrect");
+		return false;}
+	</script>
+	<div>
+		<form name="myform" method="post" onsubmit="validate()">
+			Name &nbsp;<input type="text" name="name"><br>
+			Rgister Number &nbsp;<input type="text" name="rno"><br>
+			DOB &nbsp;<input type="date" name="DOB"><br>
+			Program &nbsp;<input type="text" name="prog"><br>
+			e-mail ID &nbsp;<input type="text" name="email"><br>
+			Temporary Address &nbsp;<input type="text" name="add"><br>
+			Permanent Address &nbsp;<input type="text" name="add1"><br>
+			Phone Number &nbsp;<input type="text" name="phno"><br>
+			<input type="submit" name="a" value="submit">
+		</form>
+	</div>
+	
+</body>
+</html>

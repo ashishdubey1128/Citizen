@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<style type="text/css">
+.container{
+    padding:20px;
+    border:1px solid gray;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    background: black; 
+}
+.image-slider-wrapper{
+    overflow: hidden;
+}
+#image_slider{
+    position: relative;
+    height: 100%;
+    padding:0;
+}
+#image_slider li{
+    max-width: 100%;
+    float:left;
+    list-style: none;
+}
+.mySlides {display:none;}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function showTime()
+		{
+			var date = new Date();
+			var t = date.toLocaleTimeString();
+			document.getElementById("MyClockDisplay").innerHTML=t;
+		}
+		setInterval(function(){showTime()},1000);
+		function div3()
+		{
+			document.body.style.backgroundColor = document.fo.colo.value;
+			document.body.style.fontFamily=document.fo.styl.value;
+			document.body.style.fontSize=document.fo.siz.value;
+		}
+	</script>
+	<div id="MyClockDisplay" class="clock" style="text-align: right;width: 100%"></div>
+		<div class=”container” style="width:50%;float: left;">
+<div class="w3-content w3-display-container" style="float: left;width: 100%;">
+  <img class="mySlides" src="https://pbs.twimg.com/profile_images/579415786994839552/aE3uhPPr.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2017/04/blue/16903216-1-eng-GB/Blue.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.windsim.com/images/sky/sky_101.bmp" style="width:100%">
+  <img class="mySlides" src="http://awallpapersimages.com/wp-content/uploads/2016/07/Blue-sea-HD-wallpapers-Wallpapers-Backgrounds-Images-Art-Photos.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+  
+</div>
+	<div style="float: right;width: 50%;margin-top: 200px;">
+		<form name="fo">
+			Choose Background Color
+			<select name="colo">
+				<option value="red">red</option>
+				<option>blue</option>
+				<option>green</option>
+				<option>yellow</option>
+			</select>
+			<select name="siz">
+				<option>xx-small</option>
+				<option>x-small</option>
+				<option>small</option>
+				<option>medium</option>
+				<option>large</option>
+				<option>x-large</option>
+				<option>xx-large</option>
+			</select>
+			<select name="styl">
+				<option>verdana</option>
+				<option>georgia</option>
+				<option>arial</option>
+			</select>
+			<input type="button" name="sub" onclick="div3()" value="Submit">
+		</form>
+	</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
